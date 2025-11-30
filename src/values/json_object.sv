@@ -1,3 +1,5 @@
+`ifndef JSON_OBJECT_DEFINED
+`define JSON_OBJECT_DEFINED
 // JSON object.
 // This wrapper class represens standard JSON object value using SV associative array.
 // The class basically wraps standard SV associative array methods with some additional methods
@@ -217,3 +219,4 @@ function json_object_encodable::values_t json_object::to_json_encodable();
 
   return values;
 endfunction : to_json_encodable
+`endif // JSON_OBJECT_DEFINED

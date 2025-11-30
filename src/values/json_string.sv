@@ -1,3 +1,5 @@
+`ifndef JSON_STRING_DEFINED
+`define JSON_STRING_DEFINED
 // JSON string.
 // This wrapper class represens standard JSON string value type using SV string.
 class json_string extends json_value implements json_string_encodable;
@@ -74,3 +76,4 @@ endfunction : set
 function string json_string::to_json_encodable();
   return get();
 endfunction : to_json_encodable
+`endif // JSON_STRING_DEFINED

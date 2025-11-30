@@ -1,3 +1,5 @@
+`ifndef JSON_ERROR_DEFINED
+`define JSON_ERROR_DEFINED
 // Generic JSON error
 class json_error;
   // Width of context for printing JSON errors.
@@ -229,3 +231,4 @@ function string json_error::prettify_err_context(string err_ctx, int err_pos, in
     {pointer_offset, "|"}
   );
 endfunction : prettify_err_context
+`endif // JSON_ERROR_DEFINED

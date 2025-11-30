@@ -1,3 +1,5 @@
+`ifndef JSON_PKG_DEFINED
+`define JSON_PKG_DEFINED
 package json_pkg;
 
   // Forward declarations
@@ -78,3 +80,4 @@ package json_pkg;
   `undef JSON_INTERNAL_ERR
   `undef JSON_ERR
 endpackage : json_pkg
+`endif // JSON_PKG_DEFINED

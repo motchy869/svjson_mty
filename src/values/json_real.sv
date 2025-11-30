@@ -1,3 +1,5 @@
+`ifndef JSON_REAL_DEFINED
+`define JSON_REAL_DEFINED
 // JSON real number.
 // This wrapper class represens standard JSON number value type using SV real.
 // JSON does not specify requirements for number types, but it is more
@@ -77,3 +79,4 @@ endfunction : set
 function real json_real::to_json_encodable();
   return get();
 endfunction : to_json_encodable
+`endif // JSON_REAL_DEFINED

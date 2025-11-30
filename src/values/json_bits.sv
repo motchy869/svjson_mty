@@ -1,3 +1,5 @@
+`ifndef JSON_BITS_DEFINED
+`define JSON_BITS_DEFINED
 // JSON bit vector.
 // This wrapper class represens SV bit vector value as standard JSON string.
 // Purpose of this class is to facilitate using SV bit vectors of arbitrary size
@@ -111,3 +113,4 @@ endfunction : set
 function void json_bits::set_bits(BITS_T value);
   this.bits_value = value;
 endfunction : set_bits
+`endif // JSON_BITS_DEFINED

@@ -1,3 +1,5 @@
+`ifndef JSON_DECODER_DEFINED
+`define JSON_DECODER_DEFINED
 // JSON decoder
 class json_decoder;
   localparam byte CR = 8'd13; // 13=\r=CR - not in SV standard
@@ -726,3 +728,4 @@ function json_decoder::parser_result json_decoder::scan_until_token(
     return parser_result::ok(res);
   end
 endfunction : scan_until_token
+`endif // JSON_DECODER_DEFINED

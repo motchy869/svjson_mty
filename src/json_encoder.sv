@@ -1,3 +1,5 @@
+`ifndef JSON_ENCODER_DEFINED
+`define JSON_ENCODER_DEFINED
 // JSON encoder
 class json_encoder;
   localparam byte CR = 8'd13; // 13=\r=CR - not in SV standard
@@ -239,3 +241,4 @@ endfunction : level_to_spaces
 function bit json_encoder::is_compact();
   return this.indent_spaces == 0;
 endfunction : is_compact
+`endif // JSON_ENCODER_DEFINED

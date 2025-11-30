@@ -1,3 +1,5 @@
+`ifndef JSON_BOOL_DEFINED
+`define JSON_BOOL_DEFINED
 // JSON bool.
 // This wrapper class represens standard JSON bool value type using SV bit.
 class json_bool extends json_value implements json_bool_encodable;
@@ -74,3 +76,4 @@ endfunction : set
 function bit json_bool::to_json_encodable();
   return get();
 endfunction : to_json_encodable
+`endif // JSON_BOOL_DEFINED

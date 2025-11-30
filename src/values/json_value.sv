@@ -1,3 +1,5 @@
+`ifndef JSON_VALUE_DEFINED
+`define JSON_VALUE_DEFINED
 // Generic JSON value
 virtual class json_value implements json_value_encodable;
   // Create deep copy of a value
@@ -234,3 +236,4 @@ function bit json_value::is_bool();
   json_bool value;
   return this.matches_bool(value);
 endfunction : is_bool
+`endif // JSON_VALUE_DEFINED

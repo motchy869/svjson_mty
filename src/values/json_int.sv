@@ -1,3 +1,5 @@
+`ifndef JSON_INT_DEFINED
+`define JSON_INT_DEFINED
 // JSON integer number.
 // This wrapper class represens standard JSON number value using SV longint.
 // JSON does not specify requirements for number types, but it is more
@@ -77,3 +79,4 @@ endfunction : set
 function longint json_int::to_json_encodable();
   return get();
 endfunction : to_json_encodable
+`endif // JSON_INT_DEFINED

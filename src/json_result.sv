@@ -1,3 +1,5 @@
+`ifndef JSON_RESULT_DEFINED
+`define JSON_RESULT_DEFINED
 // Result class to facilitate error handling.
 // Inspired by Result<T, E> enumeration and a common way to propagate errors in Rust.
 // However, error type is hardcoded for `json_error`.
@@ -92,3 +94,4 @@ function bit json_result::matches_err_eq(input json_error::kind_e kind, output j
     return 0;
   end
 endfunction : matches_err_eq
+`endif // JSON_RESULT_DEFINED

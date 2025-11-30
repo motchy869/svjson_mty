@@ -1,3 +1,5 @@
+`ifndef JSON_ENUM_DEFINED
+`define JSON_ENUM_DEFINED
 // JSON enum.
 // This wrapper class represens SV enum value as standard JSON string.
 // Purpose of this class is to facilitate using SV enum with JSON decoder/encoder.
@@ -92,3 +94,4 @@ endfunction : set
 function void json_enum::set_enum(ENUM_T value);
   this.enum_value = value;
 endfunction : set_enum
+`endif // JSON_ENUM_DEFINED
