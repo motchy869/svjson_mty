@@ -4,7 +4,7 @@
 `include "../encodable/json_array_encodable.sv"
 
 // JSON array.
-// This wrapper class represens standard JSON array value using SV queue.
+// This wrapper class represents standard JSON array value using SV queue.
 // The class basically wraps standard SV queue methods with some additional methods required to operate as JSON value.
 // No additional checks are implemented for "out-of-range" accesses and similar,
 // so you can expect that this class will operate according to behavior of an original underlying SV queue.

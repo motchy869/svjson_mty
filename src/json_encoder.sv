@@ -66,7 +66,7 @@ class json_encoder;
   // Encode JSON number (real)
   extern protected function json_result#(string) convert_real(json_real_encodable obj);
 
-  // Encode JSON nool
+  // Encode JSON bool
   extern protected function json_result#(string) convert_bool(json_bool_encodable obj);
 
   // Convert indentation level to string of spaces

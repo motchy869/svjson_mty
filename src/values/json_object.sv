@@ -4,7 +4,7 @@
 `include "../encodable/json_object_encodable.sv"
 
 // JSON object.
-// This wrapper class represens standard JSON object value using SV associative array.
+// This wrapper class represents standard JSON object value using SV associative array.
 // The class basically wraps standard SV associative array methods with some additional methods
 // required to operate as JSON value.
 // No additional checks are implemented for "out-of-range" accesses and similar,
