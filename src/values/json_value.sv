@@ -1,5 +1,15 @@
 `ifndef JSON_VALUE_DEFINED
 `define JSON_VALUE_DEFINED
+
+`include "../encodable/json_value_encodable.sv"
+`include "json_object.sv"
+`include "json_array.sv"
+`include "json_string.sv"
+`include "json_int.sv"
+`include "json_real.sv"
+`include "json_bool.sv"
+`include "../json_result.sv"
+
 // Generic JSON value
 virtual class json_value implements json_value_encodable;
   // Create deep copy of a value

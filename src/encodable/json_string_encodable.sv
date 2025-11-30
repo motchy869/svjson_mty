@@ -1,5 +1,8 @@
 `ifndef JSON_STRING_ENCODABLE_DEFINED
 `define JSON_STRING_ENCODABLE_DEFINED
+
+`include "json_value_encodable.sv"
+
 // Interface for a class that can be encoded as JSON string
 interface class json_string_encodable extends json_value_encodable;
   // Get value encodable as JSON string

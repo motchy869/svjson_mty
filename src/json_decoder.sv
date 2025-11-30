@@ -1,5 +1,56 @@
 `ifndef JSON_DECODER_DEFINED
 `define JSON_DECODER_DEFINED
+
+`include "json_result.sv"
+`include "values/json_value.sv"
+`include "values/json_object.sv"
+`include "values/json_array.sv"
+`include "values/json_string.sv"
+`include "values/json_int.sv"
+`include "values/json_real.sv"
+`include "values/json_bool.sv"
+
+`ifndef JSON_SYNTAX_ERR
+// Alias to raise syntax errors in a more compact way
+`define JSON_SYNTAX_ERR(KIND, STR, IDX, DESCR="")\
+  parser_result::err( \
+    json_error::create( \
+      .kind(KIND), \
+      .description(DESCR), \
+      .json_str(STR), \
+      .json_pos(IDX), \
+      .source_file(`__FILE__), \
+      .source_line(`__LINE__) \
+    ) \
+  )
+`endif
+
+`ifndef JSON_INTERNAL_ERR
+// Alias to raise internal error in a more compact way
+`define JSON_INTERNAL_ERR(DESCR="", RES_T=parser_result)\
+  RES_T::err( \
+    json_error::create( \
+      .kind(json_error::INTERNAL), \
+      .description(DESCR), \
+      .source_file(`__FILE__), \
+      .source_line(`__LINE__) \
+    ) \
+  )
+`endif
+
+`ifndef JSON_ERR
+// Alias to raise common error
+`define JSON_ERR(KIND, DESCR="", VAL_T=json_value)\
+  json_result#(VAL_T)::err( \
+    json_error::create( \
+      .kind(KIND), \
+      .description(DESCR), \
+      .source_file(`__FILE__), \
+      .source_line(`__LINE__) \
+    ) \
+  )
+`endif
+
 // JSON decoder
 class json_decoder;
   localparam byte CR = 8'd13; // 13=\r=CR - not in SV standard

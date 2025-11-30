@@ -1,5 +1,8 @@
 `ifndef JSON_OBJECT_DEFINED
 `define JSON_OBJECT_DEFINED
+
+`include "../encodable/json_object_encodable.sv"
+
 // JSON object.
 // This wrapper class represens standard JSON object value using SV associative array.
 // The class basically wraps standard SV associative array methods with some additional methods

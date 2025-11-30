@@ -1,5 +1,8 @@
 `ifndef JSON_STRING_DEFINED
 `define JSON_STRING_DEFINED
+
+`include "../encodable/json_string_encodable.sv"
+
 // JSON string.
 // This wrapper class represens standard JSON string value type using SV string.
 class json_string extends json_value implements json_string_encodable;

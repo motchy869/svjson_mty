@@ -1,5 +1,8 @@
 `ifndef JSON_BOOL_DEFINED
 `define JSON_BOOL_DEFINED
+
+`include "../encodable/json_bool_encodable.sv"
+
 // JSON bool.
 // This wrapper class represens standard JSON bool value type using SV bit.
 class json_bool extends json_value implements json_bool_encodable;

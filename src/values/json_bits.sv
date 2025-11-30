@@ -1,5 +1,8 @@
 `ifndef JSON_BITS_DEFINED
 `define JSON_BITS_DEFINED
+
+`include "json_string.sv"
+
 // JSON bit vector.
 // This wrapper class represens SV bit vector value as standard JSON string.
 // Purpose of this class is to facilitate using SV bit vectors of arbitrary size

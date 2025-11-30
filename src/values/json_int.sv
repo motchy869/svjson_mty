@@ -1,5 +1,8 @@
 `ifndef JSON_INT_DEFINED
 `define JSON_INT_DEFINED
+
+`include "../encodable/json_int_encodable.sv"
+
 // JSON integer number.
 // This wrapper class represens standard JSON number value using SV longint.
 // JSON does not specify requirements for number types, but it is more

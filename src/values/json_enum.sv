@@ -1,5 +1,8 @@
 `ifndef JSON_ENUM_DEFINED
 `define JSON_ENUM_DEFINED
+
+`include "json_string.sv"
+
 // JSON enum.
 // This wrapper class represens SV enum value as standard JSON string.
 // Purpose of this class is to facilitate using SV enum with JSON decoder/encoder.

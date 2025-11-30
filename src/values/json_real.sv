@@ -1,5 +1,8 @@
 `ifndef JSON_REAL_DEFINED
 `define JSON_REAL_DEFINED
+
+`include "../encodable/json_real_encodable.sv"
+
 // JSON real number.
 // This wrapper class represens standard JSON number value type using SV real.
 // JSON does not specify requirements for number types, but it is more

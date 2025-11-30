@@ -1,5 +1,8 @@
 `ifndef JSON_ARRAY_DEFINED
 `define JSON_ARRAY_DEFINED
+
+`include "../encodable/json_array_encodable.sv"
+
 // JSON array.
 // This wrapper class represens standard JSON array value using SV queue.
 // The class basically wraps standard SV queue methods with some additional methods required to operate as JSON value.

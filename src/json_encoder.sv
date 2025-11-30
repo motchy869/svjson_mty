@@ -1,5 +1,21 @@
 `ifndef JSON_ENCODER_DEFINED
 `define JSON_ENCODER_DEFINED
+
+`include "json_result.sv"
+
+`ifndef JSON_ERR
+// Alias to raise common error
+`define JSON_ERR(KIND, DESCR="", VAL_T=json_value)\
+  json_result#(VAL_T)::err( \
+    json_error::create( \
+      .kind(KIND), \
+      .description(DESCR), \
+      .source_file(`__FILE__), \
+      .source_line(`__LINE__) \
+    ) \
+  )
+`endif
+
 // JSON encoder
 class json_encoder;
   localparam byte CR = 8'd13; // 13=\r=CR - not in SV standard

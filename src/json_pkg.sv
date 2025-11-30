@@ -51,26 +51,26 @@ package json_pkg;
   `include "json_result.sv"
 
   // Interface classes for encoding standard JSON value types
-  `include "json_value_encodable.sv"
-  `include "json_object_encodable.sv"
-  `include "json_array_encodable.sv"
-  `include "json_string_encodable.sv"
-  `include "json_int_encodable.sv"
-  `include "json_real_encodable.sv"
-  `include "json_bool_encodable.sv"
+  `include "encodable/json_value_encodable.sv"
+  `include "encodable/json_object_encodable.sv"
+  `include "encodable/json_array_encodable.sv"
+  `include "encodable/json_string_encodable.sv"
+  `include "encodable/json_int_encodable.sv"
+  `include "encodable/json_real_encodable.sv"
+  `include "encodable/json_bool_encodable.sv"
 
   // Wrapper classes to represent standard JSON value types
-  `include "json_value.sv"
-  `include "json_object.sv"
-  `include "json_array.sv"
-  `include "json_string.sv"
-  `include "json_int.sv"
-  `include "json_real.sv"
-  `include "json_bool.sv"
+  `include "values/json_value.sv"
+  `include "values/json_object.sv"
+  `include "values/json_array.sv"
+  `include "values/json_string.sv"
+  `include "values/json_int.sv"
+  `include "values/json_real.sv"
+  `include "values/json_bool.sv"
 
   // Extension classes to handle SV specific types
-  `include "json_enum.sv"
-  `include "json_bits.sv"
+  `include "values/json_enum.sv"
+  `include "values/json_bits.sv"
 
   // JSON processors
   `include "json_decoder.sv"
