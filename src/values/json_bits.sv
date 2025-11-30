@@ -1,5 +1,5 @@
 // JSON bit vector.
-// This wrapper class represens SV bit vector value as standard JSON string.
+// This wrapper class represents SV bit vector value as standard JSON string.
 // Purpose of this class is to facilitate using SV bit vectors of arbitrary size
 // with JSON decoder/encoder. As a result, any number, that cannot be represented
 // as JSON number using longint or real, can be represented as a string.
