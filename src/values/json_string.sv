@@ -1,6 +1,9 @@
 `ifndef JSON_STRING_DEFINED
 `define JSON_STRING_DEFINED
 
+// verilator lint_off CASEINCOMPLETE
+// verilog_lint: waive-start case-missing-default
+
 `include "../encodable/json_string_encodable.sv"
 
 // JSON string.
@@ -79,4 +82,8 @@ endfunction : set
 function string json_string::to_json_encodable();
   return get();
 endfunction : to_json_encodable
+
+// verilator lint_on CASEINCOMPLETE
+// verilog_lint: waive-stop case-missing-default
+
 `endif // JSON_STRING_DEFINED

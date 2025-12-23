@@ -1,5 +1,13 @@
+// Verible directive
+// verilog_lint: waive-start line-length
+
 `ifndef JSON_DECODER_DEFINED
 `define JSON_DECODER_DEFINED
+
+// verilator lint_off CASEINCOMPLETE
+// verilog_lint: waive-start case-missing-default
+// verilog_lint: waive-start struct-union-name-style
+// verilog_lint: waive-start typedef-enums
 
 `include "json_result.sv"
 `include "values/json_value.sv"
@@ -779,4 +787,10 @@ function json_decoder::parser_result json_decoder::scan_until_token(
     return parser_result::ok(res);
   end
 endfunction : scan_until_token
+
+// verilator lint_on CASEINCOMPLETE
+// verilog_lint: waive-stop case-missing-default
+// verilog_lint: waive-stop struct-union-name-style
+// verilog_lint: waive-stop typedef-enums
+
 `endif // JSON_DECODER_DEFINED

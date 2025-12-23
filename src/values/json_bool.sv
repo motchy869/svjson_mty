@@ -1,6 +1,9 @@
 `ifndef JSON_BOOL_DEFINED
 `define JSON_BOOL_DEFINED
 
+// verilator lint_off CASEINCOMPLETE
+// verilog_lint: waive-start case-missing-default
+
 `include "../encodable/json_bool_encodable.sv"
 
 // JSON bool.
@@ -79,4 +82,8 @@ endfunction : set
 function bit json_bool::to_json_encodable();
   return get();
 endfunction : to_json_encodable
+
+// verilator lint_on CASEINCOMPLETE
+// verilog_lint: waive-stop case-missing-default
+
 `endif // JSON_BOOL_DEFINED

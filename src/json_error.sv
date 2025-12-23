@@ -1,5 +1,13 @@
+// Verible directive
+// verilog_lint: waive-start line-length
+
 `ifndef JSON_ERROR_DEFINED
 `define JSON_ERROR_DEFINED
+
+// Verilator lint_off UNDRIVEN
+// Verilator lint_off VARHIDDEN
+// verilog_lint: waive-start typedef-enums
+
 // Generic JSON error
 class json_error;
   // Width of context for printing JSON errors.
@@ -231,4 +239,9 @@ function string json_error::prettify_err_context(string err_ctx, int err_pos, in
     {pointer_offset, "|"}
   );
 endfunction : prettify_err_context
+
+// verilog_lint: waive-stop typedef-enums
+// Verilator lint_on UNDRIVEN
+// Verilator lint_on VARHIDDEN
+
 `endif // JSON_ERROR_DEFINED

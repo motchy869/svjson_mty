@@ -1,5 +1,12 @@
+// Verible directive
+// verilog_lint: waive-start line-length
+
 `ifndef JSON_BITS_DEFINED
 `define JSON_BITS_DEFINED
+
+// verilator lint_off CASEINCOMPLETE
+// verilog_lint: waive-start case-missing-default
+// verilog_lint: waive-start typedef-enums
 
 `include "json_string.sv"
 
@@ -116,4 +123,9 @@ endfunction : set
 function void json_bits::set_bits(BITS_T value);
   this.bits_value = value;
 endfunction : set_bits
+
+// verilator lint_on CASEINCOMPLETE
+// verilog_lint: waive-stop case-missing-default
+// verilog_lint: waive-stop typedef-enums
+
 `endif // JSON_BITS_DEFINED

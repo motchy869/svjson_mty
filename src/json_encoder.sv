@@ -1,5 +1,11 @@
+// Verible directive
+// verilog_lint: waive-start line-length
+
 `ifndef JSON_ENCODER_DEFINED
 `define JSON_ENCODER_DEFINED
+
+// verilator lint_off CASEINCOMPLETE
+// verilog_lint: waive-start case-missing-default
 
 `include "json_result.sv"
 
@@ -257,4 +263,8 @@ endfunction : level_to_spaces
 function bit json_encoder::is_compact();
   return this.indent_spaces == 0;
 endfunction : is_compact
+
+// verilator lint_on CASEINCOMPLETE
+// verilog_lint: waive-stop case-missing-default
+
 `endif // JSON_ENCODER_DEFINED

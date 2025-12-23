@@ -1,6 +1,9 @@
 `ifndef JSON_ARRAY_DEFINED
 `define JSON_ARRAY_DEFINED
 
+// verilator lint_off CASEINCOMPLETE
+// verilog_lint: waive-start case-missing-default
+
 `include "../encodable/json_array_encodable.sv"
 
 // JSON array.
@@ -189,4 +192,8 @@ function json_array_encodable::values_t json_array::to_json_encodable();
 
   return values;
 endfunction : to_json_encodable
+
+// verilog_lint: waive-stop case-missing-default
+// verilator lint_on CASEINCOMPLETE
+
 `endif // JSON_ARRAY_DEFINED

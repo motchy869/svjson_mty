@@ -1,3 +1,6 @@
+// Verible directive
+// verilog_lint: waive-start line-length
+
 `ifndef JSON_RESULT_DEFINED
 `define JSON_RESULT_DEFINED
 

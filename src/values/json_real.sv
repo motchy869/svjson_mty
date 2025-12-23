@@ -1,6 +1,9 @@
 `ifndef JSON_REAL_DEFINED
 `define JSON_REAL_DEFINED
 
+// verilator lint_off CASEINCOMPLETE
+// verilog_lint: waive-start case-missing-default
+
 `include "../encodable/json_real_encodable.sv"
 
 // JSON real number.
@@ -82,4 +85,8 @@ endfunction : set
 function real json_real::to_json_encodable();
   return get();
 endfunction : to_json_encodable
+
+// verilator lint_on CASEINCOMPLETE
+// verilog_lint: waive-stop case-missing-default
+
 `endif // JSON_REAL_DEFINED

@@ -1,6 +1,9 @@
 `ifndef JSON_OBJECT_DEFINED
 `define JSON_OBJECT_DEFINED
 
+// verilator lint_off CASEINCOMPLETE
+// verilog_lint: waive-start case-missing-default
+
 `include "../encodable/json_object_encodable.sv"
 
 // JSON object.
@@ -222,4 +225,8 @@ function json_object_encodable::values_t json_object::to_json_encodable();
 
   return values;
 endfunction : to_json_encodable
+
+// verilator lint_on CASEINCOMPLETE
+// verilog_lint: waive-stop case-missing-default
+
 `endif // JSON_OBJECT_DEFINED

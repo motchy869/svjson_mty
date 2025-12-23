@@ -1,6 +1,9 @@
 `ifndef JSON_INT_DEFINED
 `define JSON_INT_DEFINED
 
+// verilator lint_off CASEINCOMPLETE
+// verilog_lint: waive-start case-missing-default
+
 `include "../encodable/json_int_encodable.sv"
 
 // JSON integer number.
@@ -82,4 +85,8 @@ endfunction : set
 function longint json_int::to_json_encodable();
   return get();
 endfunction : to_json_encodable
+
+// verilator lint_on CASEINCOMPLETE
+// verilog_lint: waive-stop case-missing-default
+
 `endif // JSON_INT_DEFINED
