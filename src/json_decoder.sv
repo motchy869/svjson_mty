@@ -773,7 +773,7 @@ function json_decoder::parser_result json_decoder::scan_until_token(
   int unsigned len = str.len();
   int unsigned idx = start_pos;
 
-  while ((str[idx] inside {this.whitespace_chars}) && (idx < len)) begin
+  while ((idx < len) && (str[idx] inside {this.whitespace_chars})) begin
     idx++;
   end
 
