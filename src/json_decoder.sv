@@ -67,10 +67,10 @@ class json_decoder;
   // Public methods
   //----------------------------------------------------------------------------
   // Try to load and decode string into JSON value
-  extern static function json_result load_string(string str);
+  extern static function json_result#() load_string(string str);
 
   // Try to load and decode file into JSON value
-  extern static function json_result load_file(string path);
+  extern static function json_result#() load_file(string path);
 
   //----------------------------------------------------------------------------
   // Private properties
@@ -160,7 +160,7 @@ function json_decoder::new();
 endfunction : new
 
 
-function json_result json_decoder::load_string(string str);
+function json_result#() json_decoder::load_string(string str);
   parsed_s parsed;
   json_error error;
   parser_result result;
@@ -181,7 +181,7 @@ function json_result json_decoder::load_string(string str);
 endfunction : load_string
 
 
-function json_result json_decoder::load_file(string path);
+function json_result#() json_decoder::load_file(string path);
   int file_descr;
   string file_text;
 
