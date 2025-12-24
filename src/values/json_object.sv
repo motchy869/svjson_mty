@@ -4,6 +4,7 @@
 // verilator lint_off CASEINCOMPLETE
 // verilog_lint: waive-start case-missing-default
 
+`include "../json_result.sv"
 `include "../encodable/json_object_encodable.sv"
 
 // JSON object.
@@ -108,7 +109,8 @@ endfunction : clone
 
 
 function bit json_object::compare(json_value value);
-  json_result#(json_object) casted;
+  typedef json_result#(json_object) json_result_obj_t;
+  json_result_obj_t casted;
   json_error err;
   json_object rhs;
 

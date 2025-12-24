@@ -4,7 +4,6 @@
 `ifndef JSON_RESULT_DEFINED
 `define JSON_RESULT_DEFINED
 
-`include "values/json_value.sv"
 `include "json_error.sv"
 
 // Result class to facilitate error handling.
