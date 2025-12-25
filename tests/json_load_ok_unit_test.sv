@@ -1,7 +1,7 @@
 `include "svunit_defines.svh"
 `include "test_utils_macros.svh"
 
-// Basic tests of `json_decoder` is used to parse JSON succesfuly
+// Basic tests of `json_decoder` is used to parse JSON successfully
 module json_load_ok_unit_test;
   import svunit_pkg::svunit_testcase;
   import test_utils_pkg::*;
